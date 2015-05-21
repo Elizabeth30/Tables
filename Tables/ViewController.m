@@ -9,10 +9,20 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tblstudents;
+@property (weak, nonatomic) IBOutlet UITextField *txtstudentname;
 @property NSArray* StudentsNames;
 @end
 NSString* CELL_NAME=@"Cell";
 @implementation ViewController
+
+- (IBAction)new_student_enter:(id)sender {
+    NSString* newstudent = [[self txtstudentname] text];
+    NSArray* newstudentarray=[[self StudentsNames] arrayByAddingObject:newstudent];
+    [self setStudentsNames:newstudentarray];
+    
+    [[self tblstudents] reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

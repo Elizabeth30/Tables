@@ -12,6 +12,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textField key="tableFooterView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="joa-vI-1H3">
+                            <rect key="frame" x="0.0" y="-30" width="600" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="NewStudent:" destination="4pR-Bg-jUN" eventType="editingDidEnd" id="5cN-dW-dOL"/>
+                                <action selector="new_student_enter:" destination="4pR-Bg-jUN" eventType="editingChanged" id="dMC-bl-QPo"/>
+                            </connections>
+                        </textField>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="a4O-lI-Oss">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -25,6 +35,10 @@
                             <outlet property="delegate" destination="4pR-Bg-jUN" id="LqE-xH-mvn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tblstudents" destination="Qkj-Zj-eE7" id="N9Z-Vn-c66"/>
+                        <outlet property="txtstudentname" destination="joa-vI-1H3" id="xEl-6s-4C5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTa-Ag-sdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
